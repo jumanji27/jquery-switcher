@@ -13,6 +13,7 @@
         else if parent.hasClass("js__s_right") && self.hasClass("js__s_noactive")
           checkbox.toLeft( parent )
 
+
       # Переключаем налево
       toLeft: (self) ->
 
@@ -51,6 +52,7 @@
             .addClass("js__s_active")
 
 
+    # Обработчики
     @each ->
       that = $(this)
       span = that.children(".js__s_checkbox").children("span")

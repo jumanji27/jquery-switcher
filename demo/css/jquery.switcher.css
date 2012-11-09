@@ -1,4 +1,4 @@
-﻿/* body в роли глобального модификатора, нужен только для демо-страницы */
+﻿/* body в роли глобального модификатора, нужен только для демо-страницы, а так же ресета */
 body {
   background:#9FC7E9; font:14px/25px HelveticaNeue, "Helvetica Neue", Helvetica, Arial, Tahoma, Serif;
   color:#333333; margin:0; padding:50px 50px 0;
@@ -9,7 +9,7 @@ body .another_switcher {
 }
 
 
-
+/* первый переключатель */
 .switcher { width:300px; height:60px; }
   .s_label { float:left; margin:2px 0 0; cursor:default; }
   .s_checkbox {
@@ -19,16 +19,20 @@ body .another_switcher {
   .s_checkbox span { float:left; width:50%; height:100%; }
 
 
+/* второй переключатель */
 .another_switcher { width:129px; height:60px; }
 
+
+/* js стили — декларативно */
 .js__s_checkbox {}
   .js__s_left { background-position:-10px -10px; }
   .js__s_right { background-position:-10px -54px; }
   .js__s_active { cursor:default; }
-  .js__s_noactive {  }
-  .js__s_label_left {  }
-  .js__s_label_right {  }
+  .js__s_noactive {}
+  .js__s_label_left {}
+  .js__s_label_right {}
 
+.js__another_switcher {}
 
 
 .github {

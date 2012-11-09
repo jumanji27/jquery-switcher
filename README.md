@@ -3,5 +3,5 @@
 for call:
 
     $(function() {
-      $("").switcher();
+      $(".js__switcher, .js__another_switcher").switcher();
     });

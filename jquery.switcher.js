@@ -3,6 +3,7 @@
   $.fn.switcher = function() {
 
     var checkbox = {
+
       // Переключаем чекбокс
       change: function( self ) {
 
@@ -16,6 +17,7 @@
         }
 
       },
+
       // Переключаем налево
       toLeft: function( self ) {
 
@@ -29,6 +31,7 @@
         }
 
       },
+
       // Переключаем вправо
       toRight: function( self ) {
 
@@ -44,6 +47,7 @@
       },
 
       help: {
+
         // Вспомогательная функция, меняет местами span'ы
         switchSpan: function( parent ) {
 
@@ -62,6 +66,7 @@
 
     }
 
+    // Обработчики
     return this.each(function() {
 
       var that = $(this);
