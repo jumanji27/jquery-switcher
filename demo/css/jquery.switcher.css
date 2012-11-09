@@ -3,11 +3,14 @@ body {
   background:#9FC7E9; font:14px/25px HelveticaNeue, "Helvetica Neue", Helvetica, Arial, Tahoma, Serif;
   color:#333333; margin:0; padding:50px 50px 0;
 }
-body .switcher { margin:0 auto; }
+body .switcher,
+body .another_switcher {
+  margin:0 auto;
+}
 
 
 
-.switcher { width:300px; height:40px; }
+.switcher { width:300px; height:60px; }
   .s_label { float:left; margin:2px 0 0; cursor:default; }
   .s_checkbox {
     float:left; width:68px; height:34px; margin:-2px 10px 10px;
@@ -15,6 +18,8 @@ body .switcher { margin:0 auto; }
   }
   .s_checkbox span { float:left; width:50%; height:100%; }
 
+
+.another_switcher { width:129px; height:60px; }
 
 .js__s_checkbox {}
   .js__s_left { background-position:-10px -10px; }
