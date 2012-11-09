@@ -10,11 +10,9 @@
         // Узнаем куда переключать и блокируем если жмут в уже активный
         if ( parent.hasClass("js__s_left") && self.hasClass("js__s_noactive") ) {
           checkbox.toRight( parent );
-          console.log("xyu");
         }
         else if ( parent.hasClass("js__s_right") && self.hasClass("js__s_noactive") ) {
           checkbox.toLeft( parent );
-          console.log("aklsd");
         }
 
       },
@@ -51,7 +49,6 @@
 
           var active = parent.children(".js__s_active");
           var noactive = parent.children(".js__s_noactive");
-
           active
             .addClass("js__s_noactive")
             .removeClass("js__s_active");
