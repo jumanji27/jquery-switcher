@@ -1,0 +1,32 @@
+﻿/* body в роли глобального модификатора, нужен только для демо-страницы */
+body {
+  background:#9FC7E9; font:14px/25px HelveticaNeue, "Helvetica Neue", Helvetica, Arial, Tahoma, Serif;
+  color:#333333; margin:0; padding:50px 50px 0;
+}
+body .switcher { margin:0 auto; }
+
+
+
+.switcher { width:300px; height:40px; }
+  .s_label { float:left; margin:2px 0 0; cursor:default; }
+  .s_checkbox {
+    float:left; width:68px; height:34px; margin:-2px 10px 10px;
+    background-image:url("../img/graphics.png");
+  }
+  .s_checkbox span { float:left; width:50%; height:100%; }
+
+
+.js__s_checkbox {}
+  .js__s_left { background-position:-10px -10px; }
+  .js__s_right { background-position:-10px -54px; }
+  .js__s_active { cursor:default; }
+  .js__s_noactive {  }
+  .js__s_label_left {  }
+  .js__s_label_right {  }
+
+
+
+.github {
+  position:fixed; background:url(../img/github.png);
+  width:99px; height:99px; top:0; right:0;
+}

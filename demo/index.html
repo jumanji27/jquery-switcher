@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>jQuery переключатель | Блог Никиты Лебедева</title>
+
+  <link rel="stylesheet" type="text/css" media="all" href="css/jquery.switcher.css">
+
+  <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+  <script type="text/javascript" src="js/jquery.switcher.js"></script>
+
+  <script type="text/javascript">
+    $(function() {
+      $(".js__switcher").switcher();
+    });
+  </script>
+
+</head>
+<body>
+
+<div class="s_wrapper">
+  <div class="switcher js__switcher">
+    <div class="s_label js__s_label_left">Левый лейбл</div>
+    <a href="#" class="s_checkbox js__s_checkbox js__s_left">
+      <span class="js__s_active"></span>
+      <span class="js__s_noactive"></span>
+    </a>
+    <div class="s_label js__s_label_right">Правый лейбл</div>
+  </div>
+</div>
+
+<a href="https://github.com/nazz-nazz/jquery_switcher" class="github" title="Страничка на гитхабе"></a>
+
+</body>
+</html>
