@@ -36,6 +36,6 @@ body .another_switcher {
 
 
 .github {
-  position:fixed; background:url(../img/github.png);
-  width:99px; height:99px; top:0; right:0;
+  position:fixed; top:0; right:0;
+  width:99px; height:99px; background:url(../img/github.png);
 }
