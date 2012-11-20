@@ -1,12 +1,32 @@
 # Блог Никиты Лебедева, nazz.me/jquery_switcher
 (($) ->
   $.fn.switcher = ->
+
     checkbox =
+
+      # Обработчики
+      initialize: (self) ->
+
+        span = self.children(".js__s_checkbox").children("span")
+        left = self.children(".js__s_label_left")
+        right = self.children(".js__s_label_right")
+
+        span.on "click", ->
+          that = $(this)
+          checkbox.change( that )
+          false
+
+        left.on "click", ->
+          checkbox.toLeft( span )
+
+        right.on "click", ->
+          checkbox.toRight( span )
+
 
       # Переключаем чекбокс
       change: (self) ->
-        parent = self.closest(".js__s_checkbox")
 
+        parent = self.closest(".js__s_checkbox")
         # Узнаем куда переключать и блокируем если жмут в уже активный
         if parent.hasClass("js__s_left") && self.hasClass("js__s_noactive")
           checkbox.toRight( parent )
@@ -52,21 +72,9 @@
             .addClass("js__s_active")
 
 
-    # Обработчики
+    # Циклом ищем что вызвано
     @each ->
       that = $(this)
-      span = that.children(".js__s_checkbox").children("span")
-      left = that.children(".js__s_label_left")
-      right = that.children(".js__s_label_right")
-      span.on "click", ->
-        that = $(this)
-        checkbox.change( that )
-        false
-
-      left.on "click", ->
-        checkbox.toLeft( span )
-
-      right.on "click", ->
-        checkbox.toRight( span )
+      checkbox.initialize( that )
 
 ) jQuery

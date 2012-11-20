@@ -4,6 +4,29 @@
 
     var checkbox = {
 
+      // Обработчики
+      initialize: function( self ) {
+
+        var span = self.children(".js__s_checkbox").children("span");
+        var left = self.children(".js__s_label_left");
+        var right = self.children(".js__s_label_right");
+
+        span.on("click", function() {
+          var that = $(this);
+          checkbox.change( that );
+          return false;
+        });
+
+        left.on("click", function() {
+          checkbox.toLeft( span );
+        });
+
+        right.on("click", function() {
+          checkbox.toRight( span );
+        });
+
+      },
+
       // Переключаем чекбокс
       change: function( self ) {
 
@@ -66,28 +89,10 @@
 
     }
 
-    // Обработчики
+    // Циклом ищем что вызвано
     return this.each(function() {
-
       var that = $(this);
-      var span = that.children(".js__s_checkbox").children("span");
-      var left = that.children(".js__s_label_left");
-      var right = that.children(".js__s_label_right");
-
-      span.on("click", function() {
-        var that = $(this);
-        checkbox.change( that );
-        return false;
-      });
-
-      left.on("click", function() {
-        checkbox.toLeft( span );
-      });
-
-      right.on("click", function() {
-        checkbox.toRight( span );
-      });
-
+      checkbox.initialize( that );
     });
 
   }
