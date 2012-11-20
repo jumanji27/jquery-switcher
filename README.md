@@ -6,4 +6,4 @@ for call:
       $(".js__switcher, .js__another_switcher").switcher();
     });
 
-### [Demo](http://nazz.me/example/jquery-switcher/)
+[Demo](http://nazz.me/example/jquery-switcher/)
