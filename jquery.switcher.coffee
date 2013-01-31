@@ -12,15 +12,15 @@
         right = self.children(".js__s_label_right")
 
         span.on "click", ->
-          that = $(this)
-          checkbox.change( that )
+          self = $(this)
+          checkbox.change(self)
           false
 
         left.on "click", ->
-          checkbox.toLeft( span )
+          checkbox.toLeft(span)
 
         right.on "click", ->
-          checkbox.toRight( span )
+          checkbox.toRight(span)
 
 
       # Переключаем чекбокс
@@ -29,9 +29,9 @@
         parent = self.closest(".js__s_checkbox")
         # Узнаем куда переключать и блокируем если жмут в уже активный
         if parent.hasClass("js__s_left") && self.hasClass("js__s_noactive")
-          checkbox.toRight( parent )
+          checkbox.toRight(parent)
         else if parent.hasClass("js__s_right") && self.hasClass("js__s_noactive")
-          checkbox.toLeft( parent )
+          checkbox.toLeft(parent)
 
 
       # Переключаем налево
@@ -41,9 +41,9 @@
         # Переключаем только если свитч в положении вправо
         if parent.hasClass("js__s_right")
           parent
-            .addClass("js__s_left")
             .removeClass("js__s_right")
-          checkbox.help.switchSpan( parent )
+            .addClass("js__s_left")
+          checkbox.help.switchSpan(parent)
 
 
       # Переключаем вправо
@@ -53,9 +53,9 @@
         # Переключаем только если свитч в положении влево
         if parent.hasClass("js__s_left")
           parent
-            .addClass("js__s_right")
             .removeClass("js__s_left")
-          checkbox.help.switchSpan( parent )
+            .addClass("js__s_right")
+          checkbox.help.switchSpan(parent)
 
 
       help:
@@ -65,8 +65,8 @@
           active = parent.children(".js__s_active")
           noactive = parent.children(".js__s_noactive")
           active
-            .addClass("js__s_noactive")
             .removeClass("js__s_active")
+            .addClass("js__s_noactive")
           noactive
             .removeClass("js__s_noactive")
             .addClass("js__s_active")
@@ -74,7 +74,7 @@
 
     # Циклом ищем что вызвано
     @each ->
-      that = $(this)
-      checkbox.initialize( that )
+      self = $(this)
+      checkbox.initialize(self)
 
 ) jQuery
