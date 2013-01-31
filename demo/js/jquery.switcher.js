@@ -42,7 +42,7 @@
       },
 
       // Переключаем налево
-      toLeft: function( self ) {
+      toLeft: function(self) {
 
         var parent = self.closest(".js__s_checkbox");
         // Переключаем только если свитч в положении вправо
@@ -56,7 +56,7 @@
       },
 
       // Переключаем вправо
-      toRight: function( self ) {
+      toRight: function(self) {
 
         var parent = self.closest(".js__s_checkbox");
         // Переключаем только если свитч в положении влево
@@ -72,7 +72,7 @@
       help: {
 
         // Вспомогательная функция, меняет местами span'ы
-        switchSpan: function( parent ) {
+        switchSpan: function(parent) {
 
           var active = parent.children(".js__s_active");
           var noactive = parent.children(".js__s_noactive");
