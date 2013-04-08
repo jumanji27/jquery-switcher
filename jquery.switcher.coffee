@@ -34,7 +34,7 @@
           checkbox.toLeft(parent)
 
 
-      # Переключаем налево
+      # Переключаем влево
       toLeft: (self) ->
 
         parent = self.closest(".js__s_checkbox")

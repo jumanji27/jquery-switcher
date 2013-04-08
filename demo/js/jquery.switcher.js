@@ -41,7 +41,7 @@
 
       },
 
-      // Переключаем налево
+      // Переключаем влево
       toLeft: function(self) {
 
         var parent = self.closest(".js__s_checkbox");
