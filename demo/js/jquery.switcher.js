@@ -1,10 +1,10 @@
-﻿// Блог Никиты Лебедева, nazz.me/jquery_switcher
+﻿// Nikita Lebedev's blog, nazz.me/jquery_switcher
 (function($) {
   $.fn.switcher = function() {
 
     var checkbox = {
 
-      // Обработчики
+      // Events
       initialize: function(self) {
 
         var span = self.children(".js__s_checkbox").children("span");
@@ -27,11 +27,11 @@
 
       },
 
-      // Переключаем чекбокс
+      // Switch checkbox
       change: function(self) {
 
         var parent = self.closest(".js__s_checkbox");
-        // Узнаем куда переключать и блокируем если жмут в уже активный
+        // We learn to switch and lock in a pinch if you have an active
         if ( parent.hasClass("js__s_left") && self.hasClass("js__s_noactive") ) {
           checkbox.toRight(parent);
         }
@@ -41,11 +41,11 @@
 
       },
 
-      // Переключаем влево
+      // Switch left
       toLeft: function(self) {
 
         var parent = self.closest(".js__s_checkbox");
-        // Переключаем только если свитч в положении вправо
+        // Toggle switch only if in the right position
         if ( parent.hasClass("js__s_right") ) {
           parent
             .removeClass("js__s_right")
@@ -55,11 +55,11 @@
 
       },
 
-      // Переключаем вправо
+      // Switch right
       toRight: function(self) {
 
         var parent = self.closest(".js__s_checkbox");
-        // Переключаем только если свитч в положении влево
+        // Toggle switch only if in the left position
         if ( parent.hasClass("js__s_left") ) {
           parent
             .removeClass("js__s_left")
@@ -71,7 +71,7 @@
 
       help: {
 
-        // Вспомогательная функция, меняет местами span'ы
+        // Helper function that swaps the spans
         switchSpan: function(parent) {
 
           var active = parent.children(".js__s_active");
@@ -89,7 +89,7 @@
 
     };
 
-    // Циклом ищем что вызвано
+    // In loop looking for what is called
     return this.each(function() {
       var self = $(this);
       checkbox.initialize(self);
@@ -97,3 +97,4 @@
 
   };
 })(jQuery);
+
