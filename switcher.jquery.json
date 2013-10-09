@@ -1,12 +1,12 @@
 {
   "name": "switcher",
-  "title": "Simple jquery switcher",
+  "title": "Simple jQuery Switcher",
   "description": "A lightweight and simple diphasic switcher plugin",
   "keywords": [
     "ui",
     "switcher"
   ],
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": {
     "name": "Nikita Lebedev",
     "url": "http://nazz.me",
