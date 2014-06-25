@@ -1,4 +1,4 @@
-# Nikita Lebedev's blog, nazz.me/jquery_switcher
+# Nikita Lebedev's blog, jumanji.name/jquery_switcher
 (($) ->
   $.fn.switcher = ->
 

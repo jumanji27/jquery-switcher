@@ -9,7 +9,7 @@
   "version": "1.0.3",
   "author": {
     "name": "Nikita Lebedev",
-    "url": "http://nazz.me",
+    "url": "http://jumanji.name",
     "email": "niklebdes@gmail.com"
   },
   "licenses": [
@@ -18,9 +18,9 @@
       "url": "http://creativecommons.org/licenses/by-nc-nd/3.0/"
     }
   ],
-  "homepage": "http://nazz.me/jquery-switcher/",
-  "demo": "http://nazz.me/example/jquery-switcher/",
-  "download": "http://nazz.me/example/jquery-switcher/zip/jquery-switcher.zip",
+  "homepage": "http://jumanji.name/jquery-switcher/",
+  "demo": "http://jumanji.name/example/jquery-switcher/",
+  "download": "http://jumanji.name/example/jquery-switcher/zip/jquery-switcher.zip",
   "dependencies": {
     "jquery": ">=1.3.2"
   }
