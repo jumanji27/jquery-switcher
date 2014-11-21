@@ -1,5 +1,4 @@
-﻿// Nikita Lebedev's blog, jumanji.name/jquery_switcher
-(function($) {
+﻿(function($) {
   $.fn.switcher = function() {
     var checkbox = {
       // Events

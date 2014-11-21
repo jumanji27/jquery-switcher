@@ -1,4 +1,3 @@
-# Nikita Lebedev's blog, jumanji.name/jquery_switcher
 (($) ->
   $.fn.switcher = ->
     checkbox =
