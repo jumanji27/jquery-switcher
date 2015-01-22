@@ -67,8 +67,9 @@
 
 
     # In loop looking for what is called
-    @each ->
+    @each( ->
       self = $(this)
       checkbox.initialize(self)
+    )
 )(jQuery)
 
