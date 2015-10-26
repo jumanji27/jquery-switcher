@@ -1,4 +1,4 @@
-# Simple jquery switcher
+# Simple jQuery Switcher
 
 for call:
 
