@@ -3,7 +3,7 @@
   "description": "A lightweight and simple diphasic switcher plugin",
   "keywords": [
     "ui",
-    "switcher"
+    "switcher",
     "jquery-plugin",
     "ecosystem:jquery"
   ],
