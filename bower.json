@@ -4,5 +4,5 @@
   "dependencies": {
     "jquery": "1.3.2"
   },
-  "ignore" : ["demo", "*.md", "switcher.jquery.json"]
+  "ignore" : ["demo", "*.md", "package.json"]
 }

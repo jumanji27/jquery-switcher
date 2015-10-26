@@ -1,0 +1,16 @@
+{
+  "name": "switcher",
+  "description": "A lightweight and simple diphasic switcher plugin",
+  "version": "1.0.14",
+  "author": "Nikita Lebedev <jumanji2277@gmail.com>",
+  "license": "Creative Commons BY-NC-ND 3.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jumanji27/jquery-switcher"
+  },
+  "main": "jquery.switcher.js",
+  "dependencies": {
+    "jquery": "1.3.2"
+  },
+  "homepage": "https://github.com/jumanji27/jquery-switcher"
+}
