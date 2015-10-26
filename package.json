@@ -4,6 +4,8 @@
   "keywords": [
     "ui",
     "switcher"
+    "jquery-plugin",
+    "ecosystem:jquery"
   ],
   "version": "1.0.16",
   "author": "Nikita Lebedev <jumanji2277@gmail.com>",
