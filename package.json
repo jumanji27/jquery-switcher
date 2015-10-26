@@ -4,7 +4,7 @@
   "keywords": ["ui", "switcher"],
   "version": "1.0.14",
   "author": "Nikita Lebedev <jumanji2277@gmail.com>",
-  "license": "CC BY-NC-ND 3.0",
+  "license": "CC-BY-NC-ND-3.0",
   "repository": {
     "type": "git",
     "url": "git://github.com/jumanji27/jquery-switcher"
