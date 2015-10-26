@@ -1,7 +1,10 @@
 {
-  "name": "switcher",
+  "name": "jqueryswitcher",
   "description": "A lightweight and simple diphasic switcher plugin",
-  "keywords": ["ui", "switcher"],
+  "keywords": [
+    "ui",
+    "switcher"
+  ],
   "version": "1.0.14",
   "author": "Nikita Lebedev <jumanji2277@gmail.com>",
   "license": "CC-BY-NC-ND-3.0",
@@ -13,5 +16,11 @@
   "dependencies": {
     "jquery": "1.3.2"
   },
-  "homepage": "https://github.com/jumanji27/jquery-switcher"
+  "homepage": "https://github.com/jumanji27/jquery-switcher",
+  "bugs": {
+    "url": "https://github.com/jumanji27/jquery-switcher/issues"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
 }
