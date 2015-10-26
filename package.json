@@ -1,11 +1,11 @@
 {
-  "name": "jqueryswitcher",
+  "name": "jquery-switcher",
   "description": "A lightweight and simple diphasic switcher plugin",
   "keywords": [
     "ui",
     "switcher"
   ],
-  "version": "1.0.14",
+  "version": "1.0.15",
   "author": "Nikita Lebedev <jumanji2277@gmail.com>",
   "license": "CC-BY-NC-ND-3.0",
   "repository": {
