@@ -1,54 +1,54 @@
 ﻿(function($) {
   $.fn.switcher = function() {
-    var checkbox = {
-      initialize: function(self) {
-        var span = self.children(".js__s_checkbox").children("span");
-        var left = self.children(".js__s_label_left");
-        var right = self.children(".js__s_label_right");
+    var switcher = {
+      initialize: function(checkbox) {
+        var button = checkbox.children(".js__s_checkbox").children("span");
+        var left = checkbox.children(".js__s_label_left");
+        var right = checkbox.children(".js__s_label_right");
 
-        span.on("click", function() {
-          var self = $(this);
-          checkbox.change(self);
+        button.on("click", function() {
+          var checkbox = $(this);
+          switcher.change(checkbox);
           return false;
         });
 
         left.on("click", function() {
-          checkbox.toLeft(span);
+          switcher.toLeft(button);
         });
 
         right.on("click", function() {
-          checkbox.toRight(span);
+          switcher.toRight(button);
         });
       },
 
 
-      change: function(self) {
-        var parent = self.closest(".js__s_checkbox");
-        if (parent.hasClass("js__s_left") && self.hasClass("js__s_noactive")) {
-          checkbox.toRight(parent);
+      change: function(checkbox) {
+        var parent = checkbox.closest(".js__s_checkbox");
+        if (parent.hasClass("js__s_left") && checkbox.hasClass("js__s_noactive")) {
+          switcher.toRight(parent);
         }
-        else if (parent.hasClass("js__s_right") && self.hasClass("js__s_noactive")) {
-          checkbox.toLeft(parent);
+        else if (parent.hasClass("js__s_right") && checkbox.hasClass("js__s_noactive")) {
+          switcher.toLeft(parent);
         }
       },
 
-      toLeft: function(self) {
-        var parent = self.closest(".js__s_checkbox");
+      toLeft: function(button) {
+        var parent = button.closest(".js__s_checkbox");
         if (parent.hasClass("js__s_right")) {
           parent
             .removeClass("js__s_right")
             .addClass("js__s_left");
-          checkbox.help.switchSpan(parent);
+          switcher.help.switchSpan(parent);
         }
       },
 
-      toRight: function(self) {
-        var parent = self.closest(".js__s_checkbox");
+      toRight: function(button) {
+        var parent = button.closest(".js__s_checkbox");
         if (parent.hasClass("js__s_left")) {
           parent
             .removeClass("js__s_left")
             .addClass("js__s_right");
-          checkbox.help.switchSpan(parent);
+          switcher.help.switchSpan(parent);
         }
       },
 
@@ -69,8 +69,8 @@
 
 
     return this.each(function() {
-      var self = $(this);
-      checkbox.initialize(self);
+      var checkbox = $(this);
+      switcher.initialize(checkbox);
     });
   };
 })(jQuery);

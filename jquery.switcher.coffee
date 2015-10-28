@@ -1,48 +1,48 @@
 (($) ->
   $.fn.switcher = ->
-    checkbox =
-      initialize: (self) ->
-        span = self.children('.js__s_checkbox').children('span')
-        left = self.children('.js__s_label_left')
-        right = self.children('.js__s_label_right')
+    switcher =
+      initialize: (checkbox) ->
+        button = checkbox.children('.js__s_checkbox').children('span')
+        left = checkbox.children('.js__s_label_left')
+        right = checkbox.children('.js__s_label_right')
 
-        span.on('click', ->
-          self = $(this)
-          checkbox.change(self)
+        button.on('click', ->
+          checkbox = $(this)
+          switcher.change(checkbox)
           false
         )
 
         left.on('click', ->
-          checkbox.toLeft(span)
+          switcher.toLeft(button)
         )
 
         right.on('click', ->
-          checkbox.toRight(span)
+          switcher.toRight(button)
         )
 
 
-      change: (self) ->
-        parent = self.closest('.js__s_checkbox')
-        if parent.hasClass('js__s_left') && self.hasClass('js__s_noactive')
-          checkbox.toRight(parent)
-        else if parent.hasClass('js__s_right') && self.hasClass('js__s_noactive')
-          checkbox.toLeft(parent)
+      change: (checkbox) ->
+        parent = checkbox.closest('.js__s_checkbox')
+        if parent.hasClass('js__s_left') && checkbox.hasClass('js__s_noactive')
+          switcher.toRight(parent)
+        else if parent.hasClass('js__s_right') && checkbox.hasClass('js__s_noactive')
+          switcher.toLeft(parent)
 
-      toLeft: (self) ->
-        parent = self.closest('.js__s_checkbox')
+      toLeft: (button) ->
+        parent = button.closest('.js__s_checkbox')
         if parent.hasClass('js__s_right')
           parent
             .removeClass('js__s_right')
             .addClass('js__s_left')
-          checkbox.help.switchSpan(parent)
+          switcher.help.switchSpan(parent)
 
-      toRight: (self) ->
-        parent = self.closest('.js__s_checkbox')
+      toRight: (button) ->
+        parent = button.closest('.js__s_checkbox')
         if parent.hasClass('js__s_left')
           parent
             .removeClass('js__s_left')
             .addClass('js__s_right')
-          checkbox.help.switchSpan(parent)
+          switcher.help.switchSpan(parent)
 
 
       help:
@@ -58,7 +58,7 @@
 
 
     @each( ->
-      self = $(this)
-      checkbox.initialize(self)
+      checkbox = $(this)
+      switcher.initialize(checkbox)
     )
 )(jQuery)
